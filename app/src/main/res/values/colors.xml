@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App ka main orange color - Swiggy jaisa feel -->
+    <color name="primary_orange">#FF6B35</color>
+    <color name="primary_dark">#E55A2B</color>
+
+    <!-- Available = Green, Sold Out = Red -->
+    <color name="available_green">#4CAF50</color>
+    <color name="sold_out_red">#F44336</color>
+
+    <!-- Background colors -->
+    <color name="background_white">#FAFAFA</color>
+    <color name="card_white">#FFFFFF</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- Kitchen module - dark professional feel -->
+    <color name="kitchen_bg">#1A1A2E</color>
+    <color name="kitchen_card">#16213E</color>
+    <color name="kitchen_accent">#0F3460</color>
+</resources>

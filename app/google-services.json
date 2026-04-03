@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "413145032279",
+    "firebase_url": "https://smartcampuscanteen-default-rtdb.firebaseio.com",
+    "project_id": "smartcampuscanteen",
+    "storage_bucket": "smartcampuscanteen.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413145032279:android:1e5c7c6c4077ef40f66512",
+        "android_client_info": {
+          "package_name": "com.mit.smartcampuscanteen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413145032279-fajp5ad0efcg18q22udp0fjjub1i3o6m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mit.smartcampuscanteen",
+            "certificate_hash": "ec786f58ead30ae91eaeba491d96f4e950a62100"
+          }
+        },
+        {
+          "client_id": "413145032279-o49um5mnn4nk1g1b0j2tgn09cg1orv52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxBktJNRejdIK0pg5Pa-9iFs9gdi2nFr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413145032279-o49um5mnn4nk1g1b0j2tgn09cg1orv52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

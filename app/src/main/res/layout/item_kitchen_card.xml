@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Har food item ka card - Kitchen staff ke liye BIG and simple -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/kitchen_card"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="20dp">
+
+        <!-- Food Item Emoji (placeholder for image) -->
+        <TextView
+            android:id="@+id/tv_item_emoji"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:background="@drawable/circle_bg"
+            android:text="🍽️"/>
+
+        <!-- Item Name and Price -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Samosa"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹15"
+                android:textColor="#FFD700"
+                android:textSize="16sp"
+                android:paddingTop="4dp"/>
+
+            <!-- Status Text (Available/Sold Out) -->
+            <TextView
+                android:id="@+id/tv_item_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● AVAILABLE"
+                android:textColor="@color/available_green"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingTop="4dp"/>
+        </LinearLayout>
+
+        <!-- THE MAIN TOGGLE SWITCH - Big and easy to tap -->
+        <Switch
+            android:id="@+id/switch_availability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
+            android:thumbTint="@color/available_green"
+            android:trackTint="#333355"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

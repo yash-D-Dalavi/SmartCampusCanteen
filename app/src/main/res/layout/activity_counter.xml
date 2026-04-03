@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Counter Manager ka dashboard — saare orders yahan dikhenge -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#2C3E50"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏪 Counter Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Active orders badge -->
+        <TextView
+            android:id="@+id/tv_pending_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending: 0"
+            android:textColor="#F39C12"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Filter Tabs: All / Pending / Ready -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_filter_all"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:text="All Orders"
+            android:background="@color/primary_orange"
+            android:textColor="#FFFFFF" android:textSize="13sp"/>
+
+        <Button android:id="@+id/btn_filter_pending"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:text="Pending"
+            android:background="#FFFFFF"
+            android:textColor="@color/text_primary" android:textSize="13sp"/>
+
+        <Button android:id="@+id/btn_filter_ready"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:text="Ready"
+            android:background="#FFFFFF"
+            android:textColor="@color/text_primary" android:textSize="13sp"/>
+    </LinearLayout>
+
+    <!-- Orders List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

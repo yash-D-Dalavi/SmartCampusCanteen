@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Student ka token screen — yahan live status dikhega -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white"
+    android:gravity="center_horizontal">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_orange"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← My Token"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/btn_back"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Big Token Number — yahi student ko dikhana hai -->
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="110dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/primary_orange">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOKEN"
+                android:textColor="#FFE0CC"
+                android:textSize="16sp"/>
+
+            <!-- Token Number — bada dikhega -->
+            <TextView
+                android:id="@+id/tv_token_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#---"
+                android:textColor="#FFFFFF"
+                android:textSize="60sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Order Summary Card -->
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_order_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item: Samosa x1"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_order_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: ₹15"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Live Status Tracker — 3 steps -->
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Status"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- 3 status steps in a row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Step 1: Received -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/dot_received"
+                        android:layout_width="40dp" android:layout_height="40dp"
+                        android:gravity="center" android:text="✓"
+                        android:textColor="#FFFFFF" android:textSize="18sp"
+                        android:background="@drawable/status_dot_active"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Received" android:textSize="11sp"
+                        android:textColor="@color/available_green" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Line connector -->
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="0.5" android:id="@+id/line_1"
+                    android:background="@color/text_hint"/>
+
+                <!-- Step 2: Preparing -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/dot_preparing"
+                        android:layout_width="40dp" android:layout_height="40dp"
+                        android:gravity="center" android:text="2"
+                        android:textColor="#FFFFFF" android:textSize="18sp"
+                        android:background="@drawable/status_dot_inactive"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Preparing" android:textSize="11sp"
+                        android:textColor="@color/text_hint" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- Line connector -->
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="0.5" android:id="@+id/line_2"
+                    android:background="@color/text_hint"/>
+
+                <!-- Step 3: Ready -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/dot_ready"
+                        android:layout_width="40dp" android:layout_height="40dp"
+                        android:gravity="center" android:text="3"
+                        android:textColor="#FFFFFF" android:textSize="18sp"
+                        android:background="@drawable/status_dot_inactive"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Ready!" android:textSize="11sp"
+                        android:textColor="@color/text_hint" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
